@@ -4,25 +4,59 @@ import images from '~/assets/images'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark ,faMagnifyingGlass,faSpinner } from '@fortawesome/free-solid-svg-icons';
+import Tippy from '@tippyjs/react';
 
+import { useEffect, useState } from 'react';
+
+import { Wrapper as PopperWrapper } from '~/components/Popper';
+import Accountlitem from '~/components/Accountlitem';
 
 const cx= classNames.bind(styles)
-function Header() {
+function Header()  {
+    const [searchResult,setSearchResult] = useState([])
+        useEffect(() => {
+            setTimeout(() =>  {
+                setSearchResult([])
+            },0)
+        },[])
+
     return  <header className={cx('wrapper')}>
         <div className={cx('inner')}>
-            <div className={cx('logo')}>
+
         <img src={images.logo} alt='TikTok' />
-            </div>
+        <Tippy 
+        interactive
+        visible={searchResult.length > 0 }
+                    render={attrs => (
+                   
+                            <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+                            <PopperWrapper>
+                                <h3 className={cx('search-title')}>
+                                    Account
+                                </h3>
+                                <Accountlitem/>
+                                <Accountlitem/>
+                                <Accountlitem/>
+                                <Accountlitem/>
+
+                            </PopperWrapper>
+                            </div>
+                       
+                    )}
+                  >
             <div className={cx('search')}>
                 <input placeholder='Search' spellCheck={false}></input>
               <button className={cx('clear')}>
                         <FontAwesomeIcon icon={faCircleXmark}/>              
 </button> 
              {/*   <FontAwesomeIcon className={cx('loading')} icon={faSpinner}/> */}
-                 <button className={cx('search-btn')}> 
-                 <FontAwesomeIcon icon={faMagnifyingGlass}/>
-                 </button>
+           
+                     <button className={cx('search-btn')}> 
+                     <FontAwesomeIcon icon={faMagnifyingGlass}/>
+                     </button>
+                
                 </div>
+                </Tippy>
                 <div className={cx('actions')}>
                          </div>
         </div> 
