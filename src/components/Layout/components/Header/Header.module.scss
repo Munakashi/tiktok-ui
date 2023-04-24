@@ -12,15 +12,18 @@
 .inner {
   height: 100%;
   width: var(--default-layout-width);
+    padding-right:  var(--default-layout-horizontal-spacer-right);
+    padding-left: var(--default-layout-horizontal-spacer-left);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .logo {
+  
 }
 .search,
 .search-result {
-  width: 415px;
+  width: 436px;
 }
 .search {
   position: relative;
@@ -60,6 +63,7 @@
   }
 }
 .search-result {
+  
 }
 .search-title {
   padding: 5px 12px;
@@ -95,16 +99,37 @@
 .custom-login{
   color: red;
 }
+.actions {
+  display: flex;
+  align-items: center;
+}
+
 .more-btn{
   font-size: 2rem;
   padding:  4px 8px ;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 16px;
   background-color: transparent;
   cursor: pointer;
 }
+.action-btn{
+  color: #161823;
+  font-size: 2.4rem;
+  background-color: transparent;
+  padding:  4px 12px;
+  cursor: pointer;
 
-// Menu
-.menu-items{
-  width: 224px;
+} 
+.user-avatar{
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+// Fontawe
+.font-plus{
+  margin-right: 10px;
+
 }
