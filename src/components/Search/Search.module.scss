@@ -57,13 +57,26 @@
   transform: translateY(-50%);
   color: rgba(22, 24, 35, 0.34);
 }
+.loading {
+  animation:  spinner 1s linear infinite;
+
+}
+
+@keyframes spinner {
+  from {
+    transform:  translateY(-50%) rotate(0);
+  }
+  to {
+    transform:  translateY(-50%) rotate(360deg);
+  }
+}
 .search-btn {
   width: var(--search-button-width);
   height: 100%;
   border-top-right-radius: var(--search-border-radius);
   border-bottom-right-radius: var(--search-border-radius);
   font-size: 1.2em;
-  color: rgba(22, 24, 35, 1);
+  color: rgb(80, 84, 105);
 
   &:hover {
     cursor: pointer;
