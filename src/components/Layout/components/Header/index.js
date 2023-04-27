@@ -21,6 +21,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import HeadlessTippy from '@tippyjs/react/headless';
+import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
@@ -29,6 +30,7 @@ import { useEffect, useState } from 'react';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Accountlitem from '~/components/Accountlitem';
 
+import routesConfig from '~/config/routes';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import { faFly } from '@fortawesome/free-brands-svg-icons';
@@ -36,6 +38,7 @@ import { InboxIcon, MessageIcon } from '~/components/Icon';
 
 import Image from '~/components/Image'
 import Search from '~/components/Search';
+
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
@@ -114,7 +117,7 @@ function Header() {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <img src={images.logo} alt="TikTok" />
+     <Link to={routesConfig.home} className={cx('logo-link')}><img src={images.logo} alt="TikTok" /> </Link>
      <Search/>
         <div className={cx('actions')}>
           {currentUser ? (

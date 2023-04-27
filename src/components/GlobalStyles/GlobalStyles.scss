@@ -9,6 +9,8 @@
     --default-layout-width: 100% ;
     --default-layout-horizontal-spacer-right: 24px;
     --default-layout-horizontal-spacer-left: 16px;
+
+    --font-family : 'ProximaNova, sans-serif'
 }
 *{
     margin: 0;
@@ -22,7 +24,7 @@ font-size: 62.5%;
 body {
     font-size: 1.6rem;
     line-height:  1.5;;
-    font-family: 'ProximaNova', sans-serif;
+    font-family: var(--font-family);
     text-rendering: optimizeSpeed;
 }
 button,input [tabindex]{

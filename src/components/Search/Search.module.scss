@@ -19,7 +19,7 @@
     caret-color: var(--primary);
     border: 0;
     outline: 0;
-
+    font-family: var(--font-family);
     background-color: transparent;
   }
   input:not(:placeholder-shown) ~ .search-btn {
