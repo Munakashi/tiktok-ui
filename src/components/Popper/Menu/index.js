@@ -41,8 +41,8 @@ function Menu({children , items = [], hideOnClick=false, onChange = DefaultFn })
     <Tippy
 
     interactive
-    delay={[0,500]}
-    offset={[16,8]}
+    delay={[0,700]}
+    offset={[12,8]}
     hideOnClick={hideOnClick}
     placement="bottom-end"
     render={(attrs) => (
@@ -51,7 +51,7 @@ function Menu({children , items = [], hideOnClick=false, onChange = DefaultFn })
           <Header  title='Language' onBack={ () => {
             setHistory((prev) => prev.slice(0,prev.length -1))
           }} />
-         {renderItems()}
+        <div className={cx('menu-body')}> {renderItems()}</div>
         </PopperWrapper>
       </div>
     )}

@@ -58,6 +58,7 @@ const MENU_ITEMS = [
           code: 'vi',
           title: 'Tiếng Việt',
         },
+    
       ],
     },
   },
@@ -131,7 +132,7 @@ function Header() {
                   <MessageIcon />
                 </button>
               </Tippy>
-              <Tippy delay={[0, 200]} content="Inbox" pl ement="bottom">
+              <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
                 <button className={cx('action-btn')}>
                <InboxIcon />
                 </button>
