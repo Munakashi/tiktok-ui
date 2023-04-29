@@ -5,7 +5,7 @@ import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-s
 
 import HeadlessTippy from '@tippyjs/react/headless';
 
-import * as request from '~/utils/request';
+import * as httpRequest from '~/utils/httpRequest';
 
 import 'tippy.js/dist/tippy.css';
 
@@ -16,7 +16,7 @@ import classNames from 'classnames/bind';
 import styles from './Search.module.scss';
 import { useDebounce } from '~/hooks';
 
-import * as searchServices from '~/apiSservices/searchServices'
+import * as searchServices from '~/services/searchServices';
 
 function Search() {
   const cx = classNames.bind(styles);

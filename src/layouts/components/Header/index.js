@@ -30,14 +30,14 @@ import { useEffect, useState } from 'react';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Accountlitem from '~/components/Accountlitem';
 
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import { faFly } from '@fortawesome/free-brands-svg-icons';
 import { InboxIcon, MessageIcon } from '~/components/Icon';
 
 import Image from '~/components/Image'
-import Search from '~/components/Search';
+import Search from '~/layouts/components/Search';
 
 const cx = classNames.bind(styles);
 
@@ -118,7 +118,7 @@ function Header() {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-     <Link to={routesConfig.home} className={cx('logo-link')}><img src={images.logo} alt="TikTok" /> </Link>
+     <Link to={config.home} className={cx('logo-link')}><img src={images.logo} alt="TikTok" /> </Link>
      <Search/>
         <div className={cx('actions')}>
           {currentUser ? (
