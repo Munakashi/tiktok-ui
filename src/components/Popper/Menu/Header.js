@@ -1,3 +1,5 @@
+
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
@@ -22,5 +24,9 @@ function Header({title,onBack}) {
         </header>
    );
 }
+Header.propTypes = {
+    title: PropTypes.string.isRequired,
+    onBack: PropTypes.func.isRequired,
+};
 
 export default Header;
