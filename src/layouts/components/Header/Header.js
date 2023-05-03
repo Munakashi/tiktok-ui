@@ -128,16 +128,16 @@ function Header() {
                 <FontAwesomeIcon icon={faPlus} className={cx('font-plus')} />
                 Upload
               </Button>
-              <Tippy delay={[0, 0]} content="Message" placement="bottom">
+              <HeadlessTippy   placement='bottom' delay={[0, 0]} content="Message" >
                 <button className={cx('action-btn')}>
                   <MessageIcon />
                 </button>
-              </Tippy>
-              <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
+              </HeadlessTippy>
+              <HeadlessTippy delay={[0, 200]} content="Inbox" placement="bottom">
                 <button className={cx('action-btn')}>
                <InboxIcon />
                 </button>
-              </Tippy>
+              </HeadlessTippy>
             </>
           ) : (
             <>
