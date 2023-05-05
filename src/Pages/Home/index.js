@@ -1,5 +1,18 @@
+
+import Video from "~/components/Video/Video";
 function Home() {
-  return <h2 style={{height: 2000}}>Home Page</h2>;
+  return ( 
+  <div className='flex flex-col items-center'>
+    <Video />
+    <Video />
+    <Video />
+    <Video />
+  </div>
+  
+  
+
+  
+  );
 }
 
 export default Home;

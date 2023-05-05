@@ -1,0 +1,59 @@
+.main-content{
+    min-width: 420px;
+    display: flex;  
+    flex: 0 0 auto;
+  
+    position: relative;
+}
+.VideoInfo{
+    display: flex;  
+    flex: 0 0 auto;
+
+}
+.avatarchar{
+    line-height: 32px;
+    border-radius: 50%;
+width: 56px;
+height: 56px;
+cursor: pointer;
+}
+.Text1{
+    font-family: SofiaPro,Arial,Tahoma,PingFangSC,sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    display: inline-block;
+    margin-right: 4px;
+}
+.Text2{
+    font-family: ProximaNova,Arial,Tahoma,PingFangSC,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block;
+    line-height: 28px;
+}
+.text3{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    word-break: break-word;
+}
+.text4{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    &:hover{
+        color: rgba(22, 24, 35, 1);
+        -webkit-text-decoration: underline;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
